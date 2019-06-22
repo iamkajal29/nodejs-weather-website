@@ -9,6 +9,7 @@ const forecast = require('./utils/forecast')
 const app = express() //app stores the express application and express() generates the application
 //app.get first argument is the route from the domain i.e. app.com here
 
+//setting port for heroku to listen
 const port = process.env.PORT || 3000
 
 //setup path
@@ -65,10 +66,6 @@ app.get('/weather',(req,res)=>{
             })
         })
     })
-    //console.log(req.query.address)
-    // res.send({
-    //     address: req.query.address,
-    // })
 })
 
 app.get('*', (req,res)=>{

@@ -21,7 +21,7 @@ weatherForm.addEventListener('click',(e)=>{
         }
         else{
             messageOne.textContent = data.location
-            messageTwo.textContent = data.forecast.summary+' The temperature seems to be '+data.forecast.temperature+' degrees.'
+            messageTwo.textContent = data.forecast.summary+' The temperature seems to be '+data.forecast.temperature+' degrees.'+'There is '+data.forecast.precipProbability+'% chance of rain.'
             console.log(data.location)
             console.log(data.forecast)
         }
