@@ -9,6 +9,7 @@ const forecast = require('./utils/forecast')
 const app = express() //app stores the express application and express() generates the application
 //app.get first argument is the route from the domain i.e. app.com here
 
+const port = process.env.PORT || 3000
 
 //setup path
 console.log(path.join(__dirname, '../public/index.html'))
@@ -79,6 +80,6 @@ app.get('*', (req,res)=>{
 
 
 //start the server
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('Server is up!')
 })
